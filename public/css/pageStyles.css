@@ -1,0 +1,699 @@
+/*******************************************************************************
+ * HOME PAGE STYLES
+ ******************************************************************************/
+body#home .revealImageContent {
+	cursor: pointer;
+}
+
+body#home .revealImageContent > div {
+	padding: 0 42px;
+}
+
+body#home .revealImageSection h2 {
+	margin: 0px -11px 0 -10px;
+	/*padding: 0 5px;*/
+}
+
+@media screen and (max-width: 960px) {
+	body#home .revealImageSection .revealImageIndexContent {
+		padding: 0 10px;
+	}
+
+	body#home .revealImageIndexContent .verticalAlignBox {
+		display: inline-block;
+		margin-left: -1%;
+	}
+
+	body#home .revealImageIndexContentWrap {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	body#home .revealImageSection .sectionIcon {
+		margin-top: 0;
+	}
+}
+
+/*******************************************************************************
+ * SOCIAL MEDIA STYLES
+ ******************************************************************************/
+body#socialMedia #twitter-widget-0 {
+	max-width: 500px!important;
+	margin: 0 auto!important;
+	display: block!important;
+}
+
+body#socialMedia .fb_iframe_widget {
+	max-width: 500px;
+	width: 100%;
+	min-width: 180px;
+	margin: 0 auto;
+	display: block!important;
+}
+
+body#socialMedia .snapwidget-widget {
+	display: block;
+	margin: 0 auto;
+	max-width: 500px;
+	min-width: 180px;
+	max-height: 650px;
+	min-height: 240px;
+	margin-bottom: -10px;
+}
+
+/*******************************************************************************
+ * RETAILERS STYLES
+ ******************************************************************************/
+body#retailers .bh-sl-form-container .form-input {
+	display: inline-block;
+}
+
+body#retailers .bh-sl-form-container .form-input label {
+	line-height: 48px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+body#retailers .bh-sl-form-container #bh-sl-submit {
+	margin: 0;
+	padding: 0 20px;
+}
+
+body#retailers .bh-sl-loc-list .list-details.no-marker {
+	width: 100%;
+	margin: 0;
+}
+
+body#retailers .bh-sl-loc-list .list-focus {
+	background: #CF0A2C!important;
+	color: white;
+	cursor: default;
+}
+
+body#retailers .bh-sl-loc-list .list-label {
+	background-image: url('../assets/images/retailers-redDot.png');
+	color: white;
+	display: block;
+	float: left;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+	line-height: 25px;
+	margin: 10px 0 0 15px;
+}
+
+body#retailers .bh-sl-loc-list .list-focus .list-label {
+	background-image: url('../assets/images/retailers-whiteDot.png');
+	color: #CF0A2C;
+}
+
+body#retailers .bh-sl-loc-list .list-focus a {
+	color: white;
+}
+
+/*******************************************************************************
+ * REWARDS STYLES
+ ******************************************************************************/
+body#rewards .coupon {
+	margin: 25px 10px;
+	text-align: center;
+}
+
+body#rewards .coupon img {
+	width: 100%;
+	max-width: 650px;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 5px;
+}
+
+body#rewards .coupon .printCoupon {
+	color: #414042;
+	outline: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+body#rewards .coupon .printCoupon:hover {
+	color: #CF0A2C;
+}
+
+body#rewards .bodySection[rel="mobileApps"], body#rewards .bodySection[rel="games"] {
+	margin: 0;
+}
+
+body#rewards .expandSection p:first-of-type {
+	margin-top: 0px;
+}
+
+body#rewards .appLogo {
+	margin: 0 auto 35px;
+	display: block;
+}
+
+body#rewards .expandSection p {
+	font-size: 17px;
+	line-height: 34px;
+}
+
+body#rewards .expandSection .images {
+	margin-top: 60px;
+	margin-bottom: 45px;
+}
+
+body#rewards .images .slick-slide .galleryImage img {
+	border: 0px;
+}
+
+body#rewards .appStoreLinks {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+body#rewards .appStoreLinks a {
+	width: auto;
+	height: 40px;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+body#rewards .appStoreLinks a img {
+	height: 100%;
+	width: auto;
+}
+
+/*******************************************************************************
+ * MAMA CAMARDO'S AND SAVORY SENSATIONS STYLES
+ ******************************************************************************/
+body#brands .bodySection {
+	line-height: 36px;
+}
+
+body#brands .brandLogo {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: -1em;
+}
+
+/*******************************************************************************
+ * ABOUT STYLES
+ ******************************************************************************/
+body#about .bodySection {
+	line-height: 36px;
+}
+
+body#about .imageLeft {
+	float: left;
+	padding-right: 12px;
+}
+
+body#about section p:first-of-type {
+	margin-top: 0;
+}
+
+body#about section p:last-of-type {
+	margin-bottom: 20px;
+}
+body#about section[rel="messageFromJulie"] p:last-of-type {
+	margin-bottom: 0;
+}
+
+body#about section[rel="history"] > img {
+	width: 100%;
+	margin-bottom: -20px;
+	display: block;
+}
+
+/*******************************************************************************
+ * PRODUCT STYLES
+ ******************************************************************************/
+body#products .bodySection {
+	margin: 0;
+}
+
+body#products .revealImageSection {
+	color: #231F20;
+}
+
+body#products .revealImageContent .revealImageContentWrap {
+	padding: 13px;
+	width: 100%;
+	height: 100%;
+}
+
+body#products .revealImageContent h2 {
+	font-size: 34px;
+	line-height: 42px;
+	display: inline-block;
+	vertical-align: middle;
+	max-height: 100%;
+	overflow: hidden;
+}
+
+body#products .revealImageContent .nutritionButton {
+	display: none;
+	background-color: #FFFFFF;
+	border: 2px solid #CF0A2C;
+	color: #58595B;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 28px;
+	width: 124px;
+	position: absolute;
+	bottom: 13px;
+	left: 50%;
+	margin-left: -62px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+body#products .revealImageContent .nutritionButton:hover {
+	background-color: #CF0A2C;
+	color: #FFFFFF;
+}
+
+body#products .revealImageSection .productLightbox {
+	display: none;
+}
+
+body#products .revealImageSection:hover .revealImageContentWrap {
+	padding-top: 0px;
+	padding-bottom: 45px;
+}
+
+body#products .revealImageSection .revealImageBackgroundWrap .revealImageBackgroundOverlay {
+	background-color: #231F20;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+body#products .revealImageSection:hover .revealImageContent .revealImageContentWrap {
+	overflow: hidden;
+}
+
+body#products .revealImageSection:hover .revealImageContent .nutritionButton {
+	display: block;
+}
+
+body#products #lightbox #lightboxContentHolder {
+	min-width: 464px;
+	max-width: 30%;
+	max-height: 80%;
+}
+
+body#products #lightbox .sharing {
+	text-align: center;
+}
+
+body#products table.nutritionInfo {
+	border-collapse: collapse;
+	font-size: 12px;
+	width: 420px;
+	position: relative;
+	margin: 0 auto;
+}
+
+body#products table.nutritionInfo th {
+	background-color: #CF0A2C;
+	color: #FFFFFF;
+	border-bottom: 8px solid #414042;
+	text-align: left;
+	font-weight: normal;
+	border-top: 1px solid #414042;
+}
+
+body#products table.nutritionInfo th .title {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+body#products table.nutritionInfo tr {
+	border-right: 1px solid #414042;
+	border-bottom: 1px solid #414042;
+	border-left: 1px solid #414042;
+}
+body#products table.nutritionInfo tr.nutritionDivideMed {
+	border-bottom: 4px solid #414042;
+}
+
+body#products table.nutritionInfo td.nutritionIndent {
+	padding-left: 1.5em;
+}
+body#products table.nutritionInfo td + td {
+	padding-right: 10px;
+}
+body#products table.nutritionInfo td + td,
+body#products table.nutritionInfo td + td + td + td,
+body#products table.nutritionInfo td.nutritionDailyValue {
+	text-align: right;
+}
+body#products table.nutritionInfo td + td + td {
+	text-align: left;
+	padding-left: 10px;
+}
+
+body#products .nutritionNote {
+	font-size: 10px;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 0;
+}
+
+@media screen and (min-width: 960px) {
+	body#products .bodySection.mobile.current {
+		display: none!important;
+	}
+}
+
+/*******************************************************************************
+ * RECIPE STYLES
+ ******************************************************************************/
+body#recipes header #navBackground {
+	background: #251D18 url('../assets/images/bannerFadedOff-recipes.png') center no-repeat;
+}
+
+body#recipes main > .contentWrapper {
+	padding: 0;
+}
+
+body#recipes .bodySection {
+	margin: 0;
+}
+
+body#recipes .expandContentWrap > div {
+	float: left;
+	display: block;
+}
+
+body#recipes .ingredients, body#recipes .instructions {
+	width: 49%;
+}
+body#recipes .ingredients {
+	margin-right: 2%;
+}
+
+body#recipes h2 {
+	margin: 0;
+	font-size: 20px;
+}
+
+body#recipes .sharing div:first-of-type {
+	margin-left: 0;
+}
+
+body#recipes .ingredients li, body#recipes .instructions li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 18px!important;
+}
+
+body#recipes #lightbox #lightboxContentHolder {
+	min-width: 838px;
+	max-width: 80%;
+	min-height: 600px;
+	max-height: 80%;
+}
+
+/*******************************************************************************
+ * PRIVATE LABEL STYLES
+ ******************************************************************************/
+body#privateLabel .bodySection {
+	margin: 0;
+}
+
+body#privateLabel .expandSection ul, body#privateLabel .expandSection p {
+	font-size: 25px;
+	line-height: 46px;
+	margin: 0 0 20px;
+}
+
+body#privateLabel .expandSection ul span {
+	font-size: 22px;
+	padding-left: 41px;
+}
+/*******************************************************************************
+ * Food Truck STYLES
+ ******************************************************************************/
+body#foodTruck .bodySection {
+	margin: 0;
+}
+body#foodTruck h3 {
+	margin: 0px !important;
+}
+body#foodTruck #gmap{
+	width: 400px;
+	height: 350px;
+	margin-bottom: 20px;
+}
+/*******************************************************************************
+ * FOOD SERVICE STYLES
+ ******************************************************************************/
+body#foodService .bodySection[rel="products"], body#foodService .bodySection[rel="distributors"] {
+	margin: 0;
+}
+
+body#foodService .bodySection[rel="products"] .showLinksPerPound .piecesPerCase,
+body#foodService .bodySection[rel="products"] .showPiecesPerCase .linksPerPound {
+	display: none;
+}
+
+body#foodService .bodySection[rel="products"] table {
+	border-collapse: collapse;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 18px;
+	width: 100%;
+	color: #231F20;
+}
+
+body#foodService .bodySection[rel="products"] tr.firstRow td {
+	padding-top: 15px;
+}
+body#foodService .bodySection[rel="products"] tr.odd {
+	background-color: #EEEEEE;
+}
+
+body#foodService .bodySection[rel="products"] th, body#foodService .bodySection[rel="products"] td {
+	padding: 0 5px;
+}
+body#foodService .bodySection[rel="products"] th {
+	border-bottom: 1px solid #CF0A2C;
+	vertical-align: bottom;
+	font-weight: normal;
+}
+body#foodService .bodySection[rel="products"] td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+body#foodService .bodySection[rel="products"] tr .description {
+	padding-left: 10px;
+	text-align: left;
+	width: 45%;
+}
+body#foodService .bodySection[rel="products"] tr .caseWeight {
+	padding-right: 10px;
+}
+
+body#foodService #distributorCurrentRegion {
+	text-align: center;
+	line-height: 26px;
+	margin: 20px 0 25px;
+}
+
+body#foodService #distributorCurrentRegion p {
+	font-size: 18px;
+	margin: 0;
+}
+
+body#foodService #distributorCurrentRegion h1 {
+	font-size: 34px;
+	color: #CF0A2C;
+	margin: 20px 0 0;
+	min-height: 26px;
+}
+
+body#foodService #distributorLogos {
+	text-align: center;
+	margin: -15px 0 25px;
+	min-height: 160px;
+}
+
+body#foodService #distributorLogos img {
+	cursor: pointer;
+	margin: 15px;
+	max-width: 145px;
+	max-height: 50px;
+	height: auto;
+	vertical-align: middle;
+}
+
+body#foodService #distributorMap {
+	position: relative;
+	margin: 0 auto 50px;
+	text-align: center;
+	color: #FFFFFF;
+	height: auto;
+	width: 100%;
+	max-width: 831px
+}
+
+body#foodService #distributorMap > img {
+	width: 100%;
+	height: auto;
+}
+
+body#foodService #distributorMap .distributorRegion {
+	display: inline-block;
+	position: absolute;
+}
+
+body#foodService #distributorMap .distributorRegionName {
+	cursor: pointer;
+	display: inline-block;
+	font-size: 17px;
+	font-weight: bold;
+}
+body#foodService #distributorMap .distributorRegion.current .distributorRegionName {
+	cursor: default;
+}
+
+body#foodService #distributorMap .distributorRegionDot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 4px 0;
+	background: url('/assets/images/foodService-mapDot.png') no-repeat left top;
+}
+body#foodService #distributorMap .distributorRegion.current .distributorRegionDot {
+	background-position: right top;
+}
+
+body#foodService .topExpandSection {
+	border-top: 1px solid #CF0A2C;
+}
+body#foodService .topExpandSection.current {
+	border-top: 3px solid #CF0A2C;
+}
+
+body#foodService .bottomExpandSection {
+	border-bottom: 0px;
+}
+
+body#foodService .bodySection[rel="distributors"] .expandSection .distributorLogo {
+	float: left;
+	margin-top: -5px;
+	padding-right: 30px;
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+}
+
+body#foodService .bodySection[rel="distributors"] li a {
+	text-decoration: none;
+}
+
+body#foodService #distributorRegion-button {
+	display: none;
+}
+
+@media screen and (max-width: 700px) {
+	body#foodService #distributorRegion-button {
+		display: block;
+	}
+
+	body#foodService #distributorCurrentRegion, body#foodService #distributorLogos,
+	body#foodService #distributorMap img, body#foodService #distributorMap div {
+		display: none!important;
+	}
+
+	body#foodService #distributorMap {
+		height: 74px;
+		width: 100%;
+		margin: 32px auto;
+		padding: 0 15px;
+	}
+
+	body#foodService .ui-selectmenu-menu {
+		height: 218px;
+		right: 25px;
+	}
+}
+
+/*******************************************************************************
+ * CONTACT STYLES
+ ******************************************************************************/
+body#contact .bodySection form .labelCell {
+	width: 22.5%;
+}
+
+body#contact .bodySection[rel="requestDonation"] p, body#contact .bodySection[rel="requestDonation"] ul li {
+	line-height: 36px;
+}
+
+body#contact .bodySection[rel="requestDonation"] ul li {
+	font-size: 17px;
+}
+
+body#contact .bodySection[rel="requestDonation"] p.ps {
+	font-style: italic;
+	font-size: 15px;
+}
+
+body#contact .bodySection[rel="requestDonation"] #centerButton {
+	margin: 0;
+	text-align: center;
+}
+
+body#contact .bodySection[rel="requestDonation"] .button {
+	padding: 0 20px;
+}
+
+/*******************************************************************************
+ * DONATION FORM STYLES
+ ******************************************************************************/
+body#donationForm form {
+	margin-top: -8px;
+}
+
+body#donationForm td.inputCell input[type="radio"]:last-child {
+	margin-left: 30px;
+}
+
+body#donationForm #certUpload {
+	display: none;
+}
+
+body#donationForm input[name="org501c3PDF"] {
+	width: 65%;
+}
+
+/*******************************************************************************
+ * FAQ STYLES
+ ******************************************************************************/
+body#faq .bodySection {
+	margin: 0;
+}
+
+body#faq .expandSection p {
+	line-height: 36px;
+	margin: 0 0 20px;
+}
+
+/*******************************************************************************
+ * ERROR STYLES
+ ******************************************************************************/
+body#error main h1 {
+	font-size: 34px;
+	color: #CF0A2C;
+	text-align: center;
+}
+
+body#error main p {
+	font-size: 17px;
+	text-align: center;
+}
