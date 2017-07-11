@@ -1,0 +1,297 @@
+/*******************************************************************************
+ * HOME PAGE STYLES
+ ******************************************************************************/
+body#home.mobile .revealImageSection .revealImageIndexContent {
+	padding: 0 10px;
+}
+
+body#home.mobile .revealImageIndexContent .verticalAlignBox {
+	display: inline-block;
+	margin-left: -1%;
+}
+
+body#home.mobile .revealImageIndexContentWrap {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+
+body#home.mobile .revealImageSection .sectionIcon {
+	margin-top: 0;
+}
+
+@media screen and (max-width: 400px) {
+	body#home.mobile .revealImageSection .sectionIcon img {
+		height: 75px;
+	}
+	body#home.mobile #socialMedia.revealImageSection .sectionIcon,
+	body#home.mobile #rewards.revealImageSection .sectionIcon {
+		width: 54.5px!important;
+	}
+	body#home.mobile #retailers.revealImageSection .sectionIcon {
+		width: 79.5px!important;
+	}
+	body#home.mobile #order.revealImageSection .sectionIcon {
+		width: 59px!important;
+	}
+	body#home.mobile #mamaCamardo.revealImageSection .sectionIcon {
+		width: 100px!important;
+	}
+	body#home.mobile #savorySensations.revealImageSection .sectionIcon {
+		width: 114.5px!important;
+	}
+
+	body#home.mobile .revealImageSection h2 {
+		font-size: 22px;
+	}
+}
+
+/*******************************************************************************
+ * SOCIAL MEDIA STYLES
+ ******************************************************************************/
+@media screen and (max-width: 600px) {
+	body#socialMedia.mobile .bodySection {
+		padding: 0 40px;
+	}
+
+	body#socialMedia.mobile #twitter-widget-0 {
+		max-width: 100%!important;
+	}
+
+	body#socialMedia.mobile .fb_iframe_widget,
+	body#socialMedia.mobile .fb_iframe_widget_fluid span,
+	body#socialMedia.mobile .fb_iframe_widget iframe {
+		max-width: 100%!important;
+	}
+
+	body#socialMedia.mobile .snapwidget-widget {
+		max-width: 100%;
+	}
+}
+
+/*******************************************************************************
+ * RETAILERS STYLES
+ ******************************************************************************/
+body#retailers.mobile .bh-sl-container {
+	margin: 0;
+}
+
+body#retailers.mobile .bh-sl-container .bh-sl-map {
+	max-height: 300px;
+}
+
+body#retailers.mobile .bh-sl-container .bh-sl-loc-list {
+	height: 100%;
+}
+
+body#retailers.mobile .contentWrapper > br {
+	display: none;
+}
+
+/*******************************************************************************
+ * REWARDS STYLES
+ ******************************************************************************/
+
+/*******************************************************************************
+ * MAMA CAMARDO'S AND SAVORY SENSATIONS STYLES
+ ******************************************************************************/
+body#brands.mobile .bodySection {
+	padding: 0 10px;
+}
+
+body#brands.mobile .bodySection, #brands.mobile .bodySection ul.dashStyle li {
+	font-size: 20px;
+	line-height: 36px;
+}
+
+/*******************************************************************************
+ * ABOUT STYLES
+ ******************************************************************************/
+body#about.mobile .bodySection p {
+	padding: 0 10px;
+}
+
+body#about.mobile .bodySection[rel="history"] {
+	margin-bottom: 0;
+}
+
+body#about.mobile .imageLeft {
+	max-width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+	body#about.mobile .imageLeft {
+		padding: 0;
+		float: none;
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+/*******************************************************************************
+ * PRODUCT STYLES
+ ******************************************************************************/
+body#products.mobile .expandContentWrap p {
+	line-height: 36px;
+	margin-top: 0;
+}
+
+body#products.mobile .nutritionInfo {
+	margin-bottom: 20px;
+	max-width: 420px;
+	width: 100%;
+}
+
+body#products.mobile .bodySection.current {
+	display: none;
+}
+
+body#products.mobile .bodySection.current.mobile {
+	display: block!important;
+}
+
+/*******************************************************************************
+ * RECIPE STYLES
+ ******************************************************************************/
+body#recipes.mobile .ingredients, body#recipes.mobile .instructions {
+	width: 100%;
+}
+
+body#recipes.mobile h2 {
+	font-size: 22px;
+}
+
+body#recipes.mobile .ingredients ul, body#recipes.mobile .instructions ol {
+	padding-left: 30px;
+	margin: 0 0 1em 0;
+}
+
+body#recipes.mobile .ingredients li, body#recipes.mobile .instructions li {
+	font-size: 20px!important;
+	line-height: 25px;
+}
+
+body#recipes.mobile #lightbox #lightboxContentHolder {
+	min-width: 0;
+	max-width: none;
+	min-height: 0;
+	max-height: none;
+}
+
+/*******************************************************************************
+ * PRIVATE LABEL STYLES
+ ******************************************************************************/
+body#privateLabel.mobile .expandSection ul {
+	padding-left: 20px;
+}
+
+body#privateLabel.mobile .expandSection ul,
+body#privateLabel.mobile .expandSection p,
+body#privateLabel.mobile .expandSection ul span {
+	font-size: 20px;
+	line-height: 36px;
+}
+
+/*******************************************************************************
+ * FOOD SERVICE STYLES
+ ******************************************************************************/
+@media screen and (max-width: 500px) {
+	body#foodService.mobile .bodySection[rel="products"] .expandContentWrap {
+		padding: 0;
+	}
+
+	body#foodService.mobile .bodySection[rel="products"] .expandContentWrap table {
+		font-size: 12px;
+	}
+}
+
+body#foodService.mobile #distributorMap {
+	height: 74px;
+	width: 100%;
+	margin: 32px auto;
+	padding: 0 15px;
+}
+
+body#foodService.mobile #distributorRegion-button {
+	display: block;
+}
+
+body#foodService.mobile .topExpandSection {
+	border-top: 2px solid #CF0A2C;
+}
+
+body#foodService #ui-id-1 {
+	display: none;
+}
+
+body#foodService.mobile .bodySection[rel="distributors"] .expandSection ul {
+	margin-top: 0;
+	padding-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+	body#foodService.mobile .bodySection[rel="distributors"] .expandTitle {
+		text-align: center;
+	}
+
+	body#foodService .bodySection[rel="distributors"] .expandSection .distributorLogo {
+		float: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	body#foodService.mobile .bodySection[rel="distributors"] .expandTitle h1 {
+		display: none;
+	}
+}
+
+/*******************************************************************************
+ * CONTACT STYLES
+ ******************************************************************************/
+body#contact.mobile .bodySection[rel="requestDonation"] {
+	padding: 0 10px;
+}
+
+body#contact.mobile .bodySection[rel="requestDonation"] .button {
+	padding: 10px 20px;
+	height: auto;
+	line-height: 24px;
+	margin: 0 10px;
+}
+
+/*******************************************************************************
+ * DONATION FORM STYLES
+ ******************************************************************************/
+body#donationForm.mobile form td.sectionTitleCell {
+	text-align: left;
+}
+
+body#donationForm.mobile form td.inputCell {
+	width: 100%;
+}
+
+/*******************************************************************************
+ * FAQ STYLES
+ ******************************************************************************/
+
+/*******************************************************************************
+ * ERROR STYLES
+ ******************************************************************************/
+body#error.mobile .contentWrapper {
+	height: 100%;
+}
+
+body#error.mobile .verticalAlignBox {
+	margin-left: -0.25em;
+	margin-right: 0;
+}
+
+body#error.mobile .bodySection {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -0.25em;
+}
+
+body#error.mobile main p {
+	line-height: 34px;
+}
