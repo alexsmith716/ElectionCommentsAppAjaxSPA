@@ -16,7 +16,7 @@ html(lang="en-US")
     link(href='data:image/x-icon;', type='image/x-icon', rel='shortcut icon') 
     intercept-url(pattern="/favicon.ico" access="ROLE_ANONYMOUS")
     link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
-    link(href='/css/main1.css', rel='stylesheet')
+    <!-- link(href='/css/main1.css', rel='stylesheet') -->
     link(href='/css/styles.css', rel='stylesheet')
     link(href='/css/pageStyles.css', rel='stylesheet')
     link(href='/css/mobileStyles.css', rel='stylesheet')
@@ -35,56 +35,63 @@ html(lang="en-US")
       var webkitVersion2 = webkitVersion1 + 3
       var webkitVersion = appVersion.slice(webkitVersion1, webkitVersion2)
       webkitVersion = parseInt(webkitVersion, 10)
-      if (webkitVersion >= 603 || !isSafari)
+      if (webkitVersion >= 603 || !isSafari) {
         interactiveFormValidationEnabled = true
+      }
 
     script.
-      console.log('### userProfileHelpers > isSafari!!: ', isSafari)
-      console.log('### userProfileHelpers > interactiveFormValidationEnabled!!: ', interactiveFormValidationEnabled)
       var lastWindowHeight, lastWindowWidth
-      $(function() {
-      // Add a listener to the window based on if we are using a newer
-      // browser or not
-      lastWindowHeight = $(window).height()
-      lastWindowWidth = $(window).width()
-      var mq = function(query, callback) {
-      var host = {}
-      if(!!(window && window.matchMedia)) {
-      var res = window.matchMedia(query)
-      callback.apply(host, [res.matches, res.media])
-      res.addListener(function(changed) {
-      callback.apply(host, [changed.matches, changed.media])
-      })
-      } else {
-      callback.apply(host, [$(window).width() <= '600'])
-      $(window).on('resize', function() {
-      crossBrowserResizeCheck(host, callback)
-      })
-      }
-      }
-      // If the following media query is matched, then display the
-      // content in mobile view
-      mq('all and (max-width: 600px)', function(match) {
-      if(match && !$('body').hasClass('mobile')) {
-      $('body').addClass('mobile')
-      } else {
-      $('body').removeClass('mobile')
-      }
-      })
-      })
-      function crossBrowserResizeCheck(host, callback) {
-      $(window).off('resize')
-      if($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
-      lastWindowHeight = $(window).height()
-      lastWindowWidth = $(window).width()
-      callback.apply(host, [$(window).width() <= '600'])
-      }
-      $(window).on('resize', function() {
-      crossBrowserResizeCheck(host, callback)
-      })
-      }
 
-  body#home(itemscope='', itemtype='')
+      console.log('### userProfileHelpers > isSafari: ', isSafari)
+      console.log('### userProfileHelpers > interactiveFormValidationEnabled??: ', interactiveFormValidationEnabled)
+
+      $(function() {
+        lastWindowHeight = $(window).height()
+        lastWindowWidth = $(window).width()
+
+        var mq = function(query, callback) {
+
+        var host = {}
+
+        if(!!(window && window.matchMedia)) {
+          var res = window.matchMedia(query)
+          callback.apply(host, [res.matches, res.media])
+          res.addListener(function(changed) {
+            callback.apply(host, [changed.matches, changed.media])
+          })
+        } else {
+            callback.apply(host, [$(window).width() <= '600'])
+            $(window).on('resize', function() {
+              crossBrowserResizeCheck(host, callback)
+            })
+          }
+        }
+
+        mq('all and (max-width: 600px)', function(match) {
+          if(match && !$('body').hasClass('mobile')) {
+            $('body').addClass('mobile')
+          } else {
+            $('body').removeClass('mobile')
+          }
+        })
+      })
+
+      function crossBrowserResizeCheck(host, callback) {
+
+        $(window).off('resize')
+
+        if($(window).height() != lastWindowHeight || $(window).width() != lastWindowWidth) {
+          lastWindowHeight = $(window).height()
+          lastWindowWidth = $(window).width()
+          callback.apply(host, [$(window).width() <= '600'])
+        }
+
+        $(window).on('resize', function() {
+          crossBrowserResizeCheck(host, callback)
+        })
+      }
+  |
+  body#home
     header
       #navBackground
       |          
@@ -92,8 +99,9 @@ html(lang="en-US")
         img#openMenu.mobile.menuIcon(src='/images/icon-openMenu.png')
         |             
         img#closeMenu.mobile.menuIcon(src='/images/icon-closeMenu.png')
-        |             
-        img#zweiglesLogo(src='/images/LOGO2016.png', alt='Election App 2017', itemprop='image', width='353', height='69')
+        |
+        div.mainLogo             
+          img#indexMainLogo(src='/images/LOGO2016.png', alt='Election App 2017', itemprop='image', width='353', height='69')
         |             
         nav
           ul
@@ -146,26 +154,19 @@ html(lang="en-US")
             |                   
             li
               a(href='') ABOUT
-      |          
-      br(clear='all')
-      |          
-      br(clear='all')
-      |          
-      br(clear='all')
-
-    .view
-
+    |       
+    main
       block content
     |
     footer
       .contentWrapper
         #socialPages
           a#twitterPage(href='', itemprop='sameas')
-            img(src='./ZweiglesHotDogs/socialMediaIcon-twitter.png', alt='Follow ElectionApp2017 on Twitter', width='29', height='29')
+            img(src='/images/socialMediaIcon-twitter.png', alt='Follow ElectionApp2017 on Twitter', width='29', height='29')
           a#facebookPage(href='', itemprop='sameas')
-            img(src='./ZweiglesHotDogs/socialMediaIcon-facebook.png', alt='Follow ElectionApp2017 on Facebook', width='29', height='29')
+            img(src='/images/socialMediaIcon-facebook.png', alt='Follow ElectionApp2017 on Facebook', width='29', height='29')
           a#instagramPage(href='', itemprop='sameas')
-            img(src='./ZweiglesHotDogs/socialMediaIcon-instagram.png', alt='Follow ElectionApp2017 on Instagram', width='29', height='29')
+            img(src='/images/socialMediaIcon-instagram.png', alt='Follow ElectionApp2017 on Instagram', width='29', height='29')
         |             
         nav
           ul

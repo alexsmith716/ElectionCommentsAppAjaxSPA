@@ -177,7 +177,12 @@
 	display: inline-block;
 }
 
-.mobile header #zweiglesLogo {
+.mobile header .mainLogo {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.mobile header #indexMainLogo {
 	width: 200px;
 	height: 39px;
 	margin-top: 5px;
