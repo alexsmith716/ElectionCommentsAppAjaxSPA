@@ -25,7 +25,7 @@ header, footer {
 }
 
 main {
-	min-height: 340px;
+	min-height: 500px;
 }
 
 main a, main a:link, main a:visited {
@@ -89,7 +89,7 @@ header {
 header #navBackground {
 	border-bottom: 2px solid #ea1b2a;
 	background: #a4d1f5;
-	height: 180px;
+	height: 130px;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -103,13 +103,13 @@ header * {
 }
 
 .mainLogo {
-	padding-top: 26px;
-	padding-bottom: 24px;
+	padding-top: 6px;
+	padding-bottom: 12px;
 }
 
 header nav {
 	padding-top: 2px;
-	padding-bottom: 34px;
+	padding-bottom: 16px;
 }
 
 header nav li.current a, header nav li a:hover, header nav li a:active {
@@ -163,7 +163,7 @@ footer nav li.current a, footer nav li a:hover, footer nav li a:active {
 #splashSection {
 	/* background-image: url(/images/splashImage14.jpg);background-size:cover;} */
 	/* background: url(/images/splashImage14.jpg);background-size:cover;} */
-	background-image: url(/images/splashImage14.jpg);background-size:cover;background-position-y:40%;height:340px
+	background-image: url(/images/splashImage14.jpg);background-size:cover;background-position-y:24%;height:500px
 }
 
 
