@@ -1,52 +1,115 @@
+
 $(function() {
-	// Open and close the mobile menu
-	$('#openMenu').on('click', function() {
-		$('header').addClass('menuOpen');
 
-		$('#closeMenu, main, footer').one('click', function() {
-			$('header').removeClass('menuOpen');
-			$('#closeMenu, main, footer').off('click');
-		});
-	});
 
-	// Handle scripts for the Food Service page
-	if($('body#foodService').length > 0) {
-		// When the main content area is scrolled, close all dropdowns
-		$('body#foodService main').scroll(function() {
-			$('body#foodService #distributorRegion').selectmenu("close");
-		});
+  $('#openMenu').on('click', function() {
+    $('header').addClass('menuOpen')
+    $('.mobile header #navBackground').css('height', $('.mobile header.menuOpen').height())
 
-		// Handle the Food Service - Distributors region dropdown
-		$('body#foodService #distributorRegion').selectmenu({
-			change: function(event, data) {
-				var region = data.item.value;
+    $('#closeMenu, main, footer').one('click', function() {
+      $('header').removeClass('menuOpen')
+      $('.mobile header #navBackground').css('height', 50)
+      $('#closeMenu, main, footer').off('click')
+    })
+  })
 
-				// Show/hide distributors based upon those available in the region
-				var hideDistributors = $('section[rel="distributors"] .expandSection:visible').not('.' + region);
-				if(hideDistributors.length > 0) {
-					hideDistributors.fadeOut().removeClass('current');
-					$('section[rel="distributors"] .expandSection.' + region).delay(400).fadeIn();
-				}
-				else {
-					$('section[rel="distributors"] .expandSection.' + region).fadeIn();
-				}
 
-				// Add a class to the first visible expandable section to designate
-				// it as such for expand/collapse styling
-				var topExpand = $($('section[rel="distributors"] .expandSection.' + region)[0]);
-				if(topExpand != $('section[rel="distributors"] .topExpandSection')) {
-					$('section[rel="distributors"] .topExpandSection').removeClass('topExpandSection');
-					topExpand.addClass('topExpandSection');
-				}
+  var doMediaQuery = function (query, cb) {
+    var host = {}
+    var res = window.matchMedia(query)
 
-				// Add a class to the first visible expandable section to designate
-				// it as such for expand/collapse styling
-				var bottomExpand = $('section[rel="distributors"] .expandSection.' + region).filter(':last');
-				if(bottomExpand != $('section[rel="distributors"] .bottomExpandSection')) {
-					$('section[rel="distributors"] .bottomExpandSection').removeClass('bottomExpandSection');
-					bottomExpand.addClass('bottomExpandSection');
-				}
-			}
-		});
-	}
-});
+    cb.apply(host, [res.matches, res.media])
+
+    res.addListener(function (changed) {
+      cb.apply(host, [changed.matches, changed.media])
+    })
+  }
+
+
+  doMediaQuery('all and (max-width: 600px)', function (match) {
+
+    if(match && !$('body').hasClass('mobile')) {
+
+      $('body').addClass('mobile')
+
+      if ( $('.mobile header').hasClass('menuOpen') ) {
+
+        $('.mobile header #navBackground').css('height', $('.mobile header.menuOpen').height())
+
+      } else {
+
+        $('.mobile header #navBackground').css('height', 50)
+
+      }
+      $('body').addClass('mobile')
+
+    } else {
+
+      $('body').removeClass('mobile')
+
+      if ( $('header .contentWrapper').height() > 130) {
+        $('header #navBackground').css('height', $('header .contentWrapper').height())
+      }
+
+      if ( $('header .contentWrapper').height() === 130) {
+        $('header #navBackground').css('height', $('header .contentWrapper').height())
+      }
+    }
+  })
+
+
+  var controlNav = controlNavEventListener(function() {
+
+    if ( $('body').hasClass('mobile') ) {
+
+      if ( $('.mobile header').hasClass('menuOpen') ) {
+
+        $('.mobile header #navBackground').css('height', $('.mobile header.menuOpen').height())
+
+      } else {
+
+        $('.mobile header #navBackground').css('height', 50)
+
+      }
+
+    } else {
+
+      if ( $('header .contentWrapper').height() > 130) {
+        $('header #navBackground').css('height', $('header .contentWrapper').height())
+      }
+
+      if ( $('header .contentWrapper').height() === 130) {
+        $('header #navBackground').css('height', $('header .contentWrapper').height())
+      }
+    }
+  }, 16)
+
+  window.addEventListener('resize', controlNav)
+})
+
+
+function controlNavEventListener(func, wait, immediate) {
+
+  var timeout
+
+  return function() {
+
+    var context = this, args = arguments
+
+    var later = function() {
+      timeout = null
+      if (!immediate) {
+        func.apply(context, args)
+      }
+    }
+
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+
+    if (callNow) {
+      func.apply(context, args)
+    }
+  }
+
+}
