@@ -157,13 +157,18 @@ footer nav li.current a, footer nav li a:hover, footer nav li a:active {
 
 
 /*******************************************************************************
- * SPLASH SECTION STYLES
+ * INDEX VIEW SECTION STYLES
  ******************************************************************************/
 
-#splashSection {
+.indexView {
 	/* background-image: url(/images/splashImage14.jpg);background-size:cover;} */
 	/* background: url(/images/splashImage14.jpg);background-size:cover;} */
-	background-image: url(/images/splashImage14.jpg);background-size:cover;background-position-y:24%;height:500px
+	/* height:500px */
+	display: table;
+	height:500px;
+	background-position-y:24%;
+	background-image: url(/images/splashImage14.jpg);
+	background-size:cover;
 }
 
 
@@ -443,75 +448,3 @@ main .contentWrapper .bodySection.current {
 	width: auto;
 }
 
-/*******************************************************************************
- * IMAGE GALLERY STYLES
- ******************************************************************************/
-
-/*
-.images {
-	width: 100%;
-	padding: 13px 56px;
-	margin-left: -56px;
-	box-sizing: content-box;
-	position: relative;
-}
-.images .imagesBackground {
-	background-color: #231F20;
-	opacity: 0.18;
-	filter: alpha(opacity=18);
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-.images .sliderCopy {
-	display: none;
-}
-.images .slider, #lightbox .imageGallery #bigViewControl.slider {
-	max-width: 794px;
-	height: 95px;
-	width: 100%;
-	margin: 0 auto;
-	overflow-x: hidden;
-}
-.images .slick-arrow, #lightbox .imageGallery #bigViewControl .slick-arrow {
-	cursor: pointer;
-	position: absolute;
-	top: 21px;
-	z-index: 1000;
-}
-.images .slick-list, #lightbox .imageGallery #bigViewControl .slick-list {
-	margin: 0 auto;
-	overflow: hidden;
-	box-sizing: content-box;
-	position: absolute;
-	left: 45px;
-	right: 45px;
-}
-.images .slick-slide, #lightbox .imageGallery #bigViewControl .slick-slide {
-	outline: none;
-}
-.images .slider .galleryImage, .images .slick-slide .galleryImage,
-#lightbox .imageGallery #bigViewControl .slick-slide .galleryImage {
-	padding: 0 5px;
-	min-width: 100px;
-	display: inline-block;
-}
-.images .slider .galleryImage img, .images .slick-slide .galleryImage img,
-#lightbox .imageGallery #bigViewControl .slick-slide .galleryImage img {
-	border: 2px solid #FFFFFF;
-	height: 80px;
-	width: auto;
-	cursor: pointer;
-	margin: 0 auto;
-}
-.images .slider.noNav .slick-list, #lightbox .slider.noNav .slick-list {
-	text-align: center;
-}
-.images .slider.noNav .slick-track, #lightbox .slider.noNav .slick-track {
-	width: auto!important;
-	display: inline-block;
-	left: initial!important;
-}
-*/
