@@ -90,7 +90,7 @@
 	line-height: 35px;
 	min-height: 45px;
 	width: 100%;
-	border-top: 1px solid #E6E7E8;
+	border-top: 1px solid #ffffff;
 	padding-left: 0;
 }
 .mobile nav ul li:first-child {
@@ -100,7 +100,7 @@
 .mobile header nav.mobile a {
 	border-bottom: 0px!important;
 	color: #0c5caa;
-	font-size: 17px;
+	font-size: 19px;
 	font-weight: normal;
 	display: inline-block;
 	width: 100%;
