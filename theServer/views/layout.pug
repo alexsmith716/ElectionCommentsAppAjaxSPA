@@ -15,15 +15,16 @@ html(lang="en-US")
 
     link(href='data:image/x-icon;', type='image/x-icon', rel='shortcut icon') 
     intercept-url(pattern="/favicon.ico" access="ROLE_ANONYMOUS")
-    link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    <!-- link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet') -->
     <!-- link(href='/css/main1.css', rel='stylesheet') -->
     link(href='/css/styles.css', rel='stylesheet')
     link(href='/css/pageStyles.css', rel='stylesheet')
     link(href='/css/mobileStyles.css', rel='stylesheet')
     link(href='/css/mobilePageStyles.css', rel='stylesheet')
     block links
+
     script(src='/jquery/jquery-min-3.2.1.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
+    <!-- script(src='/bootstrap/js/bootstrap.min.js') -->
     script(src='/javascripts/mobileSupportScripts.js')
     block headScripts
 
@@ -38,114 +39,15 @@ html(lang="en-US")
       if (webkitVersion >= 603 || !isSafari) {
         interactiveFormValidationEnabled = true
       }
-
-    script.
-
-      var mobile
-
-      $(function() {
-
-        var mq = function(query, callback) {
-          var host = {}
-
-          if(!!(window && window.matchMedia)) {
-            var res = window.matchMedia(query)
-            callback.apply(host, [res.matches, res.media])
-            res.addListener(function(changed) {
-              callback.apply(host, [changed.matches, changed.media])
-            })
-          } else {
-            callback.apply(host, [$(window).width() <= '600'])
-
-          }
-        }
-
-
-
-
-        mq('all and (max-width: 600px)', function(match) {
-
-          if(match && !$('body').hasClass('mobile')) {
-
-            console.log('>>>>>>>>>>>> mq YM: ', $('header nav.mobile').height())
-            mobile = true
-            //$('#navBackground').css('height', 800)
-            $('body').addClass('mobile')
-
-          } else {
-
-            console.log('>>>>>>>>>>>> mq NM: ', $('header nav.mobile').height())
-            mobile = false
-            $('#navBackground').css('height', $('header .contentWrapper').height())
-            $('body').removeClass('mobile')
-          }
-
-
-        })
-
-
-
-
-        var myEfficientFn = debounce(function() {
-
-
-          if ( mobile ) {
-
-            console.log('>>>>>>>>>>>> myEfficientFn YM')
-            //$('header #navBackground').css('height', 50)
-          }
-
-
-          if ( !mobile ) {
-
-            console.log('>>>>>>>>>>>> myEfficientFn NM')
-
-            if ( $('header .contentWrapper').height() > 130) {
-              $('#navBackground').css('height', $('header .contentWrapper').height())
-            }
-
-            if ( $('header .contentWrapper').height() === 130) {
-              $('header #navBackground').css('height', $('header .contentWrapper').height())
-            }
-
-          }
-
-
-        }, 10)
-
-        window.addEventListener('resize', myEfficientFn)
-      })
-
-      function debounce(func, wait, immediate) {
-        var timeout
-        return function() {
-
-          var context = this, args = arguments
-
-          var later = function() {
-            timeout = null
-            if (!immediate) func.apply(context, args)
-          }
-
-          var callNow = immediate && !timeout
-          clearTimeout(timeout)
-          timeout = setTimeout(later, wait)
-
-          if (callNow) {
-            func.apply(context, args)
-          }
-        }
-      }
-
   |
   body#home
     header
       #navBackground
       |          
       .contentWrapper
-        img#openMenu.mobile.menuIcon(src='/images/icon-openMenu.png')
-        |             
-        img#closeMenu.mobile.menuIcon(src='/images/icon-closeMenu.png')
+        img(id="openMenu", class="mobile menuIcon", src="/images/icon-openMenu.png")
+        |         
+        img(id="closeMenu", class="mobile menuIcon", src="/images/icon-closeMenu.png")    
         |
         div.mainLogo             
           img#indexMainLogo(src='/images/LOGO2016.png', alt='Election App 2017', itemprop='image', width='353', height='69')
@@ -201,6 +103,7 @@ html(lang="en-US")
             |                   
             li
               a(href='') ABOUT
+      br(clear="all")
     |       
     main
       block content
@@ -268,3 +171,4 @@ html(lang="en-US")
         p.mobile &copy; 2016 ElectionApp2017
 
     block bodyScripts
+      script(src='/javascripts/mobileSupportScripts.js')
