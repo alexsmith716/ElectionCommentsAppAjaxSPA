@@ -9,6 +9,7 @@ html(lang="en-US")
     meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
     block metas
 
     block title
@@ -18,14 +19,14 @@ html(lang="en-US")
     <!-- link(href='/bootstrap/css/bootstrap.min.css', rel='stylesheet') -->
     <!-- link(href='/css/main1.css', rel='stylesheet') -->
     link(href='/css/styles.css', rel='stylesheet')
-    link(href='/css/pageStyles.css', rel='stylesheet')
     link(href='/css/mobileStyles.css', rel='stylesheet')
-    link(href='/css/mobilePageStyles.css', rel='stylesheet')
+
     block links
 
     script(src='/jquery/jquery-min-3.2.1.js')
     <!-- script(src='/bootstrap/js/bootstrap.min.js') -->
     script(src='/javascripts/mobileSupportScripts.js')
+
     block headScripts
 
     script.
@@ -43,68 +44,124 @@ html(lang="en-US")
   body#home
     header
       #navBackground
-      |          
+      |        
       .contentWrapper
         img(id="openMenu", class="mobile menuIcon", src="/images/icon-openMenu.png")
-        |         
+        |
         img(id="closeMenu", class="mobile menuIcon", src="/images/icon-closeMenu.png")    
         |
         div.mainLogo             
           img#indexMainLogo(src='/images/LOGO2016.png', alt='Election App 2017', itemprop='image', width='353', height='69')
-        |             
-        nav
-          ul
-            li.current
-              a(href='') HOME
-            |                   
-            li
-              a(href='') LOG IN
-            |                   
-            li
-              a(href='') SIGN UP
-            |                   
-            li
-              a(href='') MEMBERS ONLY
-            |                   
-            li
-              a(href='') CUSTOMER SERVICE
-            |                   
-            li
-              a(href='') CONTACT
-            |                   
-            li
-              a(href='') TEAM
-            |                   
-            li
-              a(href='') ABOUT
-        |             
-        nav.mobile
-          ul
-            li.current
-              a(href='') HOME
-            |                   
-            li
-              a(href='') LOG IN
-            |                   
-            li
-              a(href='') SIGN UP
-            |                   
-            li
-              a(href='') MEMBERS ONLY
-            |                   
-            li
-              a(href='') CUSTOMER SERVICE
-            |                   
-            li
-              a(href='') CONTACT
-            |                   
-            li
-              a(href='') TEAM
-            |                   
-            li
-              a(href='') ABOUT
-      br(clear="all")
-    |       
+        |
+
+        if currentUser
+
+          nav
+            ul
+              li.current
+                a(href='/userhome') HOME*
+              |
+              li
+                a(href='/login') LOG IN
+              |
+              li
+                a(href='/signup') SIGN UP
+              |
+              li
+                a(href='/membersonly') MEMBERS ONLY
+              |
+              li
+                a(href='') CUSTOMER SERVICE
+              |
+              li
+                a(href='') CONTACT
+              |
+              li
+                a(href='') TEAM
+              |
+              li
+                a(href='') ABOUT
+          |
+          nav.mobile
+            ul
+              li.current
+                a(href='/') HOME*
+              |
+              li
+                a(href='/login') LOG IN
+              |
+              li
+                a(href='/signup') SIGN UP
+              |
+              li
+                a(href='/membersonly') MEMBERS ONLY
+              |
+              li
+                a(href='/customerservice') CUSTOMER SERVICE
+              |     
+              li
+                a(href='/contact') CONTACT
+              |    
+              li
+                a(href='/team') TEAM
+              |   
+              li
+                a(href='/about') ABOUT
+
+        else         
+
+          nav
+            ul
+              li.current
+                a(href='/userhome') HOME+
+              |     
+              li
+                a(href='/login') LOG IN
+              |   
+              li
+                a(href='/signup') SIGN UP
+              |   
+              li
+                a(href='/membersonly') MEMBERS ONLY
+              |                   
+              li
+                a(href='/customerservice') CUSTOMER SERVICE
+              |                   
+              li
+                a(href='/contact') CONTACT
+              |                   
+              li
+                a(href='/team') TEAM
+              |                   
+              li
+                a(href='/about') ABOUT
+          |             
+          nav.mobile
+            ul
+              li.current
+                a(href='/') HOME+
+              |                   
+              li
+                a(href='/login') LOG IN
+              |                   
+              li
+                a(href='/signup') SIGN UP
+              |                   
+              li
+                a(href='/membersonly') MEMBERS ONLY
+              |                   
+              li
+                a(href='/customerservice') CUSTOMER SERVICE
+              |                   
+              li
+                a(href='/contact') CONTACT
+              |                   
+              li
+                a(href='/team') TEAM
+              |                   
+              li
+                a(href='/about') ABOUT
+    |
     main
       block content
     |
@@ -117,57 +174,57 @@ html(lang="en-US")
             img(src='/images/socialMediaIcon-facebook.png', alt='Follow ElectionApp2017 on Facebook', width='29', height='29')
           a#instagramPage(href='', itemprop='sameas')
             img(src='/images/socialMediaIcon-instagram.png', alt='Follow ElectionApp2017 on Instagram', width='29', height='29')
-        |             
+        |   
         nav
           ul
             li.current
               a(href='') HOME
-            |                   
+            |           
             li
               a(href='') MEMBERS ONLY
-            |                   
+            |           
             li
               a(href='') CUSTOMER SERVICE
-            |                   
+            |          
             li
               a(href='') CONTACT
-            |                   
+            |          
             li
               a(href='') TEAM
-            |                   
+            |         
             li
               a(href='') ABOUT
-            |                   
+            |        
             li
               a(href='') CONTACT
-            |                   
+            |        
             li
               a(href='') FAQ
-        |             
+        |
         p
           | &copy;
           span(itemprop='copyrightYear') 2016
-          |  
-          |                
+          |
+          |
           span(itemscope='', itemtype='', itemprop='copyrightHolder', itemref='socialPages')
             span#ownerInfo
               meta(itemprop='logo', content='')
-              |                      
+              |          
               meta(itemprop='url', content='')
-              |                      
+              |        
               span(itemprop='name') ElectionApp2017
-              |  | 
+              |  |
               span(itemprop='description') The Election App for 2017
-              |  | 
+              |  |
               span(itemscope='', itemtype='', itemprop='address')
                 span(itemprop='streetAddress') 1616 West Street
-                | , 
+                | ,
                 span(itemprop='addressLocality') Boston
-                | , 
+                | ,
                 span(itemprop='addressRegion') NY
-                |  
+                |
                 span(itemprop='postalCode') 10011
-        |             
+        |  
         p.mobile &copy; 2016 ElectionApp2017
 
     block bodyScripts

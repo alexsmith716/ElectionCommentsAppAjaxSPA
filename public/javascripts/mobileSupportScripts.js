@@ -82,7 +82,7 @@ $(function() {
         $('header #navBackground').css('height', $('header .contentWrapper').height())
       }
     }
-  }, 16)
+  }, 12)
 
   window.addEventListener('resize', controlNav)
 })

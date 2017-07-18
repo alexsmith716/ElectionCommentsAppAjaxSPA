@@ -154,7 +154,8 @@ var helper = {
                 window.localStorage.setItem('token', data.token)
                 console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> loginForm > SUCCESS > SUCCESS > dataT: ', data.token)
                 console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> loginForm > SUCCESS > SUCCESS > dataR: ', data.redirect)
-                helper.directSuccess(data.redirect)
+                //helper.directSuccess(data.redirect)
+                 $('.content').html(response)
                 
               } else {
                 hideLoading()
