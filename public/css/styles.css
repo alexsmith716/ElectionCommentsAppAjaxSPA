@@ -2,9 +2,8 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px;
-	color: #990099;
 }
 
 body * {
@@ -87,8 +86,7 @@ header {
 }
 
 header #navBackground {
-	border-bottom: 2px solid #ea1b2a;
-	background: #a4d1f5;
+	background: #ffffff;
 	height: 130px;
 	position: absolute;
 	top: 0px;
@@ -160,10 +158,7 @@ footer nav li.current a, footer nav li a:hover, footer nav li a:active {
  * INDEX VIEW SECTION STYLES
  ******************************************************************************/
 
-.indexView {
-	/* background-image: url(/images/splashImage14.jpg);background-size:cover;} */
-	/* background: url(/images/splashImage14.jpg);background-size:cover;} */
-	/* height:500px */
+.header-section {
 	display: table;
 	height:500px;
 	background-position-y:24%;
