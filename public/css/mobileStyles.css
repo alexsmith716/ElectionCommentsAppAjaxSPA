@@ -54,7 +54,7 @@
 	border-bottom: 0px;
 	height: 50px;
 	opacity: 1;
-	background: #a4d1f5!important;
+	background: #ffffff!important;
 }
 .mobile header.menuOpen #navBackground {
 	bottom: 0px;
@@ -67,6 +67,7 @@
 }
 
 .mobile header nav.mobile {
+	border-top: 1px solid #ea1b2a;
 	position: relative;
 	float: left;
 	padding: 0;
@@ -77,20 +78,19 @@
 }
 
 .mobile header nav.mobile ul {
-	max-width: 450px;
-	padding: 0 10px;
+	padding: 0 20px;
 	width: 100%;
 	margin: 0 auto;
 	text-align: left;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 .mobile header nav.mobile li {
 	font-size: 40px;
-	line-height: 35px;
-	min-height: 45px;
+	line-height: 30px;
+	min-height: 40px;
 	width: 100%;
-	border-top: 1px solid #ffffff;
+	border-top: 1px solid #eeeeee;
 	padding-left: 0;
 }
 .mobile nav ul li:first-child {
@@ -100,7 +100,7 @@
 .mobile header nav.mobile a {
 	border-bottom: 0px!important;
 	color: #0c5caa;
-	font-size: 19px;
+	font-size: 14px;
 	font-weight: normal;
 	display: inline-block;
 	width: 100%;

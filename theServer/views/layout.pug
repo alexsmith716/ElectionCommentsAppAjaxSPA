@@ -41,7 +41,7 @@ html(lang="en-US")
         interactiveFormValidationEnabled = true
       }
   |
-  body#home
+  body#page-top
     header
       #navBackground
       |        
@@ -59,7 +59,7 @@ html(lang="en-US")
           nav
             ul
               li.current
-                a(href='/userhome') HOME*
+                a(href='/') HOME
               |
               li
                 a(href='/login') LOG IN
@@ -68,24 +68,21 @@ html(lang="en-US")
                 a(href='/signup') SIGN UP
               |
               li
+                a(href='/about') ABOUT
+              |
+              li
+                a(href='/team') TEAM
+              |
+              li
+                a(href='/contact') CONTACT
+              |
+              li
                 a(href='/membersonly') MEMBERS ONLY
-              |
-              li
-                a(href='') CUSTOMER SERVICE
-              |
-              li
-                a(href='') CONTACT
-              |
-              li
-                a(href='') TEAM
-              |
-              li
-                a(href='') ABOUT
           |
           nav.mobile
             ul
               li.current
-                a(href='/') HOME*
+                a(href='/') HOME
               |
               li
                 a(href='/login') LOG IN
@@ -94,73 +91,64 @@ html(lang="en-US")
                 a(href='/signup') SIGN UP
               |
               li
-                a(href='/membersonly') MEMBERS ONLY
+                a(href='/about') ABOUT
               |
               li
-                a(href='/customerservice') CUSTOMER SERVICE
-              |     
+                a(href='/team') TEAM
+              |
               li
                 a(href='/contact') CONTACT
-              |    
+              |
               li
-                a(href='/team') TEAM
-              |   
-              li
-                a(href='/about') ABOUT
+                a(href='/membersonly') MEMBERS ONLY
 
         else         
 
           nav
-            ul
+            ul     
               li.current
-                a(href='/userhome') HOME+
-              |     
+                a(href='/') HOME
+              |
               li
                 a(href='/login') LOG IN
-              |   
+              |
               li
                 a(href='/signup') SIGN UP
-              |   
-              li
-                a(href='/membersonly') MEMBERS ONLY
-              |                   
-              li
-                a(href='/customerservice') CUSTOMER SERVICE
-              |                   
-              li
-                a(href='/contact') CONTACT
-              |                   
-              li
-                a(href='/team') TEAM
-              |                   
+              |
               li
                 a(href='/about') ABOUT
+              |
+              li
+                a(href='/team') TEAM
+              |
+              li
+                a(href='/contact') CONTACT
+              |
+              li
+                a(href='/membersonly') MEMBERS ONLY
           |             
           nav.mobile
             ul
               li.current
-                a(href='/') HOME+
-              |                   
+                a(href='/') HOME
+              |
               li
                 a(href='/login') LOG IN
-              |                   
+              |
               li
                 a(href='/signup') SIGN UP
-              |                   
-              li
-                a(href='/membersonly') MEMBERS ONLY
-              |                   
-              li
-                a(href='/customerservice') CUSTOMER SERVICE
-              |                   
-              li
-                a(href='/contact') CONTACT
-              |                   
-              li
-                a(href='/team') TEAM
-              |                   
+              |
               li
                 a(href='/about') ABOUT
+              |
+              li
+                a(href='/team') TEAM
+              |
+              li
+                a(href='/contact') CONTACT
+              |
+              li
+                a(href='/membersonly') MEMBERS ONLY!
     |
     main
       block content
@@ -178,28 +166,25 @@ html(lang="en-US")
         nav
           ul
             li.current
-              a(href='') HOME
-            |           
+              a(href='/') HOME
+            |
             li
-              a(href='') MEMBERS ONLY
-            |           
+              a(href='/login') LOG IN
+            |
             li
-              a(href='') CUSTOMER SERVICE
-            |          
+              a(href='/signup') SIGN UP
+            |
             li
-              a(href='') CONTACT
-            |          
+              a(href='/about') ABOUT
+            |
             li
-              a(href='') TEAM
-            |         
+              a(href='/team') TEAM
+            |
             li
-              a(href='') ABOUT
-            |        
+              a(href='/contact') CONTACT
+            |
             li
-              a(href='') CONTACT
-            |        
-            li
-              a(href='') FAQ
+              a(href='/membersonly') MEMBERS ONLY
         |
         p
           | &copy;

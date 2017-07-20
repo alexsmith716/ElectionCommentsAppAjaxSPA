@@ -26,7 +26,7 @@ $(function() {
   }
 
 
-  doMediaQuery('all and (max-width: 600px)', function (match) {
+  doMediaQuery('all and (max-width: 768px)', function (match) {
 
     if(match && !$('body').hasClass('mobile')) {
 
@@ -82,7 +82,7 @@ $(function() {
         $('header #navBackground').css('height', $('header .contentWrapper').height())
       }
     }
-  }, 12)
+  }, 20)
 
   window.addEventListener('resize', controlNav)
 })
